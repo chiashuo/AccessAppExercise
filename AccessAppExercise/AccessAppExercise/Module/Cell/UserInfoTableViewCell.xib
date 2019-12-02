@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="UserInfoTableViewCell" customModule="AccessAppExercise" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Rd-tc-Wg7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X4H-uG-NVx">
+                                <rect key="frame" x="15" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X4H-uG-NVx" secondAttribute="height" multiplier="1:1" id="MU4-HK-rmw"/>
+                                    <constraint firstAttribute="height" priority="999" constant="60" id="ks8-vb-lLg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKC-Ap-IVM">
+                                <rect key="frame" x="85" y="30" width="220" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="zl8-dc-C0W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iav-vd-wr6">
+                                <rect key="frame" x="85" y="52" width="60" height="18"/>
+                                <color key="backgroundColor" red="0.31764705882352939" green="0.31764705882352939" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="H7l-fw-ge8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pKC-Ap-IVM" secondAttribute="trailing" constant="15" id="3AO-MX-GEZ"/>
+                            <constraint firstItem="Iav-vd-wr6" firstAttribute="leading" secondItem="X4H-uG-NVx" secondAttribute="trailing" constant="10" id="4aN-cO-xIE"/>
+                            <constraint firstItem="pKC-Ap-IVM" firstAttribute="leading" secondItem="X4H-uG-NVx" secondAttribute="trailing" constant="10" id="DQs-dE-nXk"/>
+                            <constraint firstAttribute="bottom" secondItem="X4H-uG-NVx" secondAttribute="bottom" constant="10" id="M6Y-jK-kNm"/>
+                            <constraint firstItem="Iav-vd-wr6" firstAttribute="top" secondItem="pKC-Ap-IVM" secondAttribute="bottom" constant="2" id="gdi-cb-e4n"/>
+                            <constraint firstItem="X4H-uG-NVx" firstAttribute="leading" secondItem="3Rd-tc-Wg7" secondAttribute="leading" constant="15" id="sHd-UK-gj6"/>
+                            <constraint firstItem="X4H-uG-NVx" firstAttribute="top" secondItem="3Rd-tc-Wg7" secondAttribute="top" constant="10" id="u9p-1o-yFC"/>
+                            <constraint firstItem="Iav-vd-wr6" firstAttribute="bottom" secondItem="X4H-uG-NVx" secondAttribute="bottom" id="u9u-ih-Oxu"/>
+                            <constraint firstItem="pKC-Ap-IVM" firstAttribute="centerY" secondItem="X4H-uG-NVx" secondAttribute="centerY" id="v3n-hh-ofJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Rd-tc-Wg7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2IX-Y7-dHu"/>
+                    <constraint firstAttribute="trailing" secondItem="3Rd-tc-Wg7" secondAttribute="trailing" id="DcZ-De-NPK"/>
+                    <constraint firstItem="3Rd-tc-Wg7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hyR-DW-KKN"/>
+                    <constraint firstAttribute="bottom" secondItem="3Rd-tc-Wg7" secondAttribute="bottom" id="y8W-rE-4z6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="staffLabel" destination="Iav-vd-wr6" id="tFa-E2-d5o"/>
+                <outlet property="userAvatarImageView" destination="X4H-uG-NVx" id="phR-Nv-5Sr"/>
+                <outlet property="userNameLabel" destination="pKC-Ap-IVM" id="Lyd-HM-dXX"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="185.49107142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
