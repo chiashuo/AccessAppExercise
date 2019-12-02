@@ -37,9 +37,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iav-vd-wr6">
-                                <rect key="frame" x="85" y="52" width="60" height="18"/>
+                                <rect key="frame" x="85" y="45" width="60" height="20"/>
                                 <color key="backgroundColor" red="0.31764705882352939" green="0.31764705882352939" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="32d-D9-gqr"/>
                                     <constraint firstAttribute="width" constant="60" id="H7l-fw-ge8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -51,13 +52,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="pKC-Ap-IVM" secondAttribute="trailing" constant="15" id="3AO-MX-GEZ"/>
                             <constraint firstItem="Iav-vd-wr6" firstAttribute="leading" secondItem="X4H-uG-NVx" secondAttribute="trailing" constant="10" id="4aN-cO-xIE"/>
+                            <constraint firstItem="pKC-Ap-IVM" firstAttribute="top" secondItem="X4H-uG-NVx" secondAttribute="top" priority="998" id="8Tw-7Q-r1O"/>
                             <constraint firstItem="pKC-Ap-IVM" firstAttribute="leading" secondItem="X4H-uG-NVx" secondAttribute="trailing" constant="10" id="DQs-dE-nXk"/>
+                            <constraint firstItem="Iav-vd-wr6" firstAttribute="bottom" secondItem="X4H-uG-NVx" secondAttribute="bottom" constant="-5" id="EYa-GY-9Bx"/>
                             <constraint firstAttribute="bottom" secondItem="X4H-uG-NVx" secondAttribute="bottom" constant="10" id="M6Y-jK-kNm"/>
-                            <constraint firstItem="Iav-vd-wr6" firstAttribute="top" secondItem="pKC-Ap-IVM" secondAttribute="bottom" constant="2" id="gdi-cb-e4n"/>
                             <constraint firstItem="X4H-uG-NVx" firstAttribute="leading" secondItem="3Rd-tc-Wg7" secondAttribute="leading" constant="15" id="sHd-UK-gj6"/>
                             <constraint firstItem="X4H-uG-NVx" firstAttribute="top" secondItem="3Rd-tc-Wg7" secondAttribute="top" constant="10" id="u9p-1o-yFC"/>
-                            <constraint firstItem="Iav-vd-wr6" firstAttribute="bottom" secondItem="X4H-uG-NVx" secondAttribute="bottom" id="u9u-ih-Oxu"/>
-                            <constraint firstItem="pKC-Ap-IVM" firstAttribute="centerY" secondItem="X4H-uG-NVx" secondAttribute="centerY" id="v3n-hh-ofJ"/>
+                            <constraint firstItem="pKC-Ap-IVM" firstAttribute="centerY" secondItem="X4H-uG-NVx" secondAttribute="centerY" priority="999" id="v3n-hh-ofJ"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -73,6 +74,8 @@
                 <outlet property="staffLabel" destination="Iav-vd-wr6" id="tFa-E2-d5o"/>
                 <outlet property="userAvatarImageView" destination="X4H-uG-NVx" id="phR-Nv-5Sr"/>
                 <outlet property="userNameLabel" destination="pKC-Ap-IVM" id="Lyd-HM-dXX"/>
+                <outlet property="userNameLabelCenterYConstraint" destination="v3n-hh-ofJ" id="OwR-RD-JRU"/>
+                <outlet property="userNameLabelTopYConstraint" destination="8Tw-7Q-r1O" id="met-lb-c1Z"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="185.49107142857142"/>
         </tableViewCell>

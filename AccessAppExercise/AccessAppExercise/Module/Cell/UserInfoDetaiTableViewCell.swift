@@ -19,6 +19,10 @@ class UserInfoDetaiTableViewCell: UITableViewCell {
     /// blog
     @IBOutlet weak var blogButton: UIButton!
     
+    @IBOutlet weak var userNameLabelCenterYConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var userNameLabelTopYConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         staffLabel.layer.cornerRadius = 10
@@ -32,6 +36,11 @@ class UserInfoDetaiTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func shouldShowStaffLabel( show:Bool){
+        userNameLabelCenterYConstraint.priority = show ? .defaultLow: .defaultHigh
+        userNameLabelTopYConstraint.priority = show ? .defaultHigh: .defaultLow
+        staffLabel.isHidden = !show
+    }
     
     /// Blog button click event
     /// - Parameter sender: blog button
@@ -40,6 +49,12 @@ class UserInfoDetaiTableViewCell: UITableViewCell {
         if let url = URL(string: blog){
             UIApplication.shared.open(url, options:[:], completionHandler: nil)
         }
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        staffLabel.isHidden = true
+        userNameLabelCenterYConstraint.priority = .defaultHigh
+        userNameLabelTopYConstraint.priority = .defaultLow
     }
     
 }

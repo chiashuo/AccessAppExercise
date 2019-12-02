@@ -86,7 +86,8 @@ extension UserInfoDetailViewController: UITableViewDataSource{
             cell.blogButton.setTitle(userInfoDetail!.blog, for: .normal)
             cell.locationLabel.text = userInfoDetail?.location
             cell.userNameLabel.text = userInfoDetail?.login
-            cell.staffLabel.isHidden = userInfoDetail?.site_admin == false
+            let shouldShow = userInfoDetail?.site_admin ?? false;
+            cell.shouldShowStaffLabel(show: shouldShow)
             return cell
         }
         

@@ -18,11 +18,20 @@ class UserInfoTableViewCell: UITableViewCell {
     /// site_admin
     @IBOutlet weak var staffLabel: UILabel!
     
+    @IBOutlet weak var userNameLabelCenterYConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var userNameLabelTopYConstraint: NSLayoutConstraint!
+    
     var userInfo: User?{
         didSet{
             userAvatarImageView.setImageWithFadeEffectWithURL(userInfo?.avatar_url ?? "", placeHolder: UIImage())
             userNameLabel.text = userInfo?.login
-            staffLabel.isHidden = userInfo?.site_admin == false
+            guard let shouldShow = userInfo?.site_admin else {
+                return
+            }
+            staffLabel.isHidden = shouldShow == false
+            userNameLabelCenterYConstraint.priority = shouldShow ? .defaultLow: .defaultHigh
+            userNameLabelTopYConstraint.priority = shouldShow ? .defaultHigh: .defaultLow
         }
     }
     
@@ -38,6 +47,12 @@ class UserInfoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        staffLabel.isHidden = true
+        userNameLabelCenterYConstraint.priority = .defaultHigh
+        userNameLabelTopYConstraint.priority = .defaultLow
     }
     
 }

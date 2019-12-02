@@ -94,10 +94,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Klu-GV-H5J" firstAttribute="top" secondItem="0uj-kU-hwT" secondAttribute="bottom" id="1Yt-yU-INN"/>
                             <constraint firstItem="0uj-kU-hwT" firstAttribute="leading" secondItem="dqQ-wp-W4M" secondAttribute="trailing" constant="15" id="62R-N7-Jg9"/>
                             <constraint firstItem="yyx-u7-ZHQ" firstAttribute="leading" secondItem="vq2-YJ-vPN" secondAttribute="trailing" constant="15" id="B2n-on-Wfn"/>
                             <constraint firstItem="Klu-GV-H5J" firstAttribute="leading" secondItem="dqQ-wp-W4M" secondAttribute="trailing" constant="15" id="DOd-EQ-FSR"/>
+                            <constraint firstItem="Klu-GV-H5J" firstAttribute="bottom" secondItem="dqQ-wp-W4M" secondAttribute="bottom" id="FEi-mV-e1B"/>
                             <constraint firstItem="GFK-Y1-dii" firstAttribute="top" secondItem="vq2-YJ-vPN" secondAttribute="bottom" constant="15" id="L2n-vH-lJC"/>
                             <constraint firstAttribute="trailing" secondItem="yyx-u7-ZHQ" secondAttribute="trailing" constant="15" id="Oc9-4y-VFQ"/>
                             <constraint firstItem="mC5-jU-8mX" firstAttribute="centerY" secondItem="GFK-Y1-dii" secondAttribute="centerY" id="QGN-1G-vpe"/>
@@ -132,6 +132,8 @@
                 <outlet property="locationLabel" destination="yyx-u7-ZHQ" id="g4P-sc-DMq"/>
                 <outlet property="staffLabel" destination="Klu-GV-H5J" id="SK3-Sd-nBy"/>
                 <outlet property="userNameLabel" destination="0uj-kU-hwT" id="1NI-JY-3mT"/>
+                <outlet property="userNameLabelCenterYConstraint" destination="jL3-ji-ixM" id="MKV-ZQ-UGI"/>
+                <outlet property="userNameLabelTopYConstraint" destination="pXD-Ij-0hd" id="0wf-S3-f84"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="202.56696428571428"/>
         </tableViewCell>
