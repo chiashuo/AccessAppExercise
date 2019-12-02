@@ -65,7 +65,7 @@ fileprivate extension UserInfoDetailViewController {
     }
     func fetchUserInfoDetail() {
         HUD.show(.progress, onView: view)
-        viewModel.fetchUserList(userName: userName)
+        viewModel.fetchUserInfo(userName: userName)
     }
 }
 

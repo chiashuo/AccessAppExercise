@@ -19,7 +19,7 @@ class UserInfoDetailViewModel {
             self.shouldUpdateUserDeatil?(userInfoDetail!)
         }
     }
-    func fetchUserList(userName:String) {
+    func fetchUserInfo(userName:String) {
         userInfoDetailService.fetchUserInfoDeatil(userName: userName) { [weak self] (userInfoDetail)  in
             if let _ = userInfoDetail{
                 self?.userInfoDetail = userInfoDetail!
