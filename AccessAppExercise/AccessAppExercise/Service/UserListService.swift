@@ -9,6 +9,11 @@
 import Foundation
 import Alamofire
 class UserListService {
+    
+    /// Fetch User List
+    /// - Parameters:
+    ///   - id: 從哪裡個id開始
+    ///   - completion: call back
     func fetchUserList(id: String, completion: @escaping ([User]) -> Void){
         let url = "\(Domain)/users?since=\(id)"
         

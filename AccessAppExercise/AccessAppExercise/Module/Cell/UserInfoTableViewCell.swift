@@ -10,9 +10,14 @@ import UIKit
 
 class UserInfoTableViewCell: UITableViewCell {
     
+    /// avatar_url
     @IBOutlet weak var userAvatarImageView: UIImageView!
+    /// login
     @IBOutlet weak var userNameLabel: UILabel!
+    
+    /// site_admin
     @IBOutlet weak var staffLabel: UILabel!
+    
     var userInfo: User?{
         didSet{
             userAvatarImageView.setImageWithFadeEffectWithURL(userInfo?.avatar_url ?? "", placeHolder: UIImage())

@@ -10,6 +10,11 @@ import Foundation
 import Alamofire
 
 class UserInfoDetailService {
+    
+    /// Fetch user info detail
+    /// - Parameters:
+    ///   - userName: server 回傳的 login 欄位
+    ///   - completion: call back
     func fetchUserInfoDeatil(userName: String, completion: @escaping (UserInfoDetail?) -> Void){
         let url = "\(Domain)/users/\(userName)"
         
